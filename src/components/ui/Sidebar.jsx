@@ -26,3 +26,11 @@ export const SidebarProvider = ({ children, open: openProp, setOpen: setOpenProp
     </SidebarContext.Provider>
   );
 };
+
+export const Sidebar = ({ children, open, setOpen, animate }) => {
+  return (
+    <SidebarProvider open={open} setOpen={setOpen} animate={animate}>
+      {children}
+    </SidebarProvider>
+  );
+};
