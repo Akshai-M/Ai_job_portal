@@ -107,3 +107,17 @@ export const MobileSidebar = ({ className, children, ...props }) => {
     </div>
   );
 };
+
+export const SidebarLink = ({ link, className, ...props }) => {
+  const { open, animate } = useSidebar();
+  return (
+    <Link
+      to={link.href} // Adjusted to use "to" for react-router-dom
+      className={cn("flex items-center justify-start gap-2 group/sidebar py-2", className)}
+      {...props}
+    >
+      {link.icon}
+      
+    </Link>
+  );
+};
