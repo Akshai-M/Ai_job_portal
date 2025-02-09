@@ -34,3 +34,12 @@ export const Sidebar = ({ children, open, setOpen, animate }) => {
     </SidebarProvider>
   );
 };
+
+export const SidebarBody = (props) => {
+  return (
+    <>
+      <DesktopSidebar {...props} />
+      <MobileSidebar {...props} />
+    </>
+  );
+};
