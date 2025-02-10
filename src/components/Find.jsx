@@ -38,7 +38,15 @@ function Find() {
     </thead>
     <tbody>
       
-      
+      <tr className="hover:bg-gray-50 border-2 ">
+        <td className="px-4 py-3 whitespace-nowrap">
+          <div className="text-sm font-medium text-gray-900">I would like to match with jobs.</div>
+        </td>
+        <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+          February 4, 2025
+        </td>
+       
+      </tr>
       <tr className="hover:bg-gray-50 border-2 ">
         <td className="px-4 py-3 whitespace-nowrap">
           <div className="text-sm font-medium text-gray-900">I would like to match with jobs.</div>
