@@ -14,7 +14,13 @@ function Find() {
     </button>
   </div>
 
-  
+  <div className="mb-4">
+    <input
+      type="text"
+      placeholder="Filter threads..."
+      className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+    />
+  </div>
 
   <table className="min-w-full divide-y divide-gray-200 table-auto"> 
     
