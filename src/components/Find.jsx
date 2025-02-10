@@ -47,7 +47,16 @@ function Find() {
         <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
           February 4, 2025
         </td>
-       
+        <td className="px-4 py-3 whitespace-nowrap text-right text-sm font-medium flex items-center pl-7">
+          <a href="#" className="text-indigo-600 hover:text-indigo-900 mr-2 flex items-center">
+            <Edit className="h-4 w-4 mr-1" />
+           
+          </a>
+          <a href="#" className="text-red-600 hover:text-red-900 flex items-center">
+            <Trash2 className="h-4 w-4 mr-1" />
+         
+          </a>
+        </td>
       </tr>
      
     
