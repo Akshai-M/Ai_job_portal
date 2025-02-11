@@ -13,6 +13,16 @@ const JobCard = ({ job }) => {
       className=" bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 border border-gray-200"
     >
       
+
+     
+
+
+      <div className="flex justify-between items-center mt-4">
+        <p className="text-sm text-gray-500">
+          Starts in:{" "}
+          <span className="text-black font-medium">{job.startsIn}</span>
+        </p>
+      </div>
       <div className="mt-3">
 
       <Button
