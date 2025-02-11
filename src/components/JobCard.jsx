@@ -13,7 +13,18 @@ const JobCard = ({ job }) => {
       className=" bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 border border-gray-200"
     >
       
-      
+      <div className="mt-3">
+
+      <Button
+        onClick={(e) => {
+          e.stopPropagation();
+          window.open(job.applyUrl, "_blank");
+        }}
+        className="bg-indigo-600 w-full hover:bg-indigo-700 text-white font-semibold  py-3 px-6 rounded-lg shadow-md transition-all duration-300"
+      >
+        Apply Here
+      </Button>
+      </div>
     </div>
   );
 };
