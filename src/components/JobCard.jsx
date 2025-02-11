@@ -14,7 +14,22 @@ const JobCard = ({ job }) => {
     >
       
 
-     
+      <div className="text-sm text-gray-700 space-y-2">
+        <div className="flex items-center">
+          <TbBriefcase2 className="text-gray-500 text-lg mr-2" />
+          <span>{job.experience}</span>
+          <FaRupeeSign className="ml-4 text-gray-500 text-lg mr-1" />
+          <span>{job.salary ? `${job.salary} LPA` : "Negotiable"}</span>
+        </div>
+        <div className="flex items-center">
+          <IoLocationSharp className="text-gray-500 text-lg mr-2" />
+          <span>{job.location}</span>
+        </div>
+        <div className="flex items-center">
+          <PiNotepadBold className="text-gray-500 text-xl mr-2" />
+          <p className="text-gray-500">{job.description}</p>
+        </div>
+      </div>
 
       <div className="flex flex-wrap gap-2 mt-3">
         {job.skills && job.skills.length > 0 ? (
