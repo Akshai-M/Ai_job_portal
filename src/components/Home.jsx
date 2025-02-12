@@ -26,7 +26,22 @@ const Home = () => {
      
 
       
-      
+      <div className=" w-72 lg:w-auto lg:p-0 p-2 mx-auto absolute bottom-4 lg:bottom-10">
+        <div className="lg:flex w-full justify-center gap-6 mb-1 lg:mb-8">
+          <button
+            className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-2 px-6 py-3 text-lg font-semibold bg-transparent border border-white text-black bg-indigo-600 rounded-lg"
+            onClick={() =>
+              setActiveComponent(activeComponent === "jobs" ? null : "jobs")
+            }
+          >
+            <Wand className="h-5 w-5" />
+            Match Jobs
+          </button>
+
+        </div>
+
+        
+      </div>
     </div>
   );
 };
