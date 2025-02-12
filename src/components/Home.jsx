@@ -38,6 +38,20 @@ const Home = () => {
             Match Jobs
           </button>
 
+          <button className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-1 px-6 py-3 text-lg font-semibold bg-transparent border border-black text-black bg-indigo-300 rounded-lg">
+            <Upload className="h-5 w-5" />
+            Upload Resume
+          </button>
+
+          <button
+            className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-2 px-6 py-3 text-lg font-semibold bg-transparent border border-black text-black bg-indigo-300 rounded-lg"
+            onClick={() =>
+              setActiveComponent(activeComponent === "thread" ? null : "thread")
+            }
+          >
+            <MessageSquareDiff className="h-5 w-5" />
+            New Thread
+          </button>
         </div>
 
         <div className="flex lg:w-full items-center justify-center gap-4">
