@@ -23,7 +23,16 @@ const Home = () => {
 
       {activeComponent === "thread" && <NewThread />}
 
-     
+      {filterModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-20 flex justify-center items-center">
+          <div
+            ref={filterModalRef}
+            className="bg-white p-6 rounded-lg max-w-max space-y-8"
+          >
+            <Filter />
+          </div>
+        </div>
+      )}
 
       
       <div className=" w-72 lg:w-auto lg:p-0 p-2 mx-auto absolute bottom-4 lg:bottom-10">
