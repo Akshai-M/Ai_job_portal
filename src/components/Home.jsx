@@ -15,7 +15,22 @@ const Home = () => {
 
   const filterModalRef = useRef(null);
 
-  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        filterModalRef.current &&
+        !filterModalRef.current.contains(event.target)
+      ) {
+        setFilterModalOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="max-w-3xl w-full mx-auto lg:mt-0 mt-10 p-8 overflow-hidden min-h-[400px]">
