@@ -1,4 +1,6 @@
 import React from "react";
+import { FaRegBookmark, FaRupeeSign } from "react-icons/fa";
+import { TbBriefcase2 } from "react-icons/tb";
 
 const JobCard = ({ job }) => {
   
