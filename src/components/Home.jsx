@@ -40,7 +40,18 @@ const Home = () => {
 
         </div>
 
-        
+        <div className="flex lg:w-full items-center justify-center gap-4">
+          <Button
+            variant="outline"
+            className="flex items-center gap-2 px-4 py-2 border border-black text-gray-700 hover:bg-gray-100 rounded-lg"
+            onClick={() => setFilterModalOpen(!filterModalOpen)}
+          >
+            <FilterIcon className="h-5 w-5" />
+            Filter
+          </Button>
+
+          <SearchBar className="w-full max-w-lg" />
+        </div>
       </div>
     </div>
   );
