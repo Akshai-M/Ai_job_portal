@@ -7,6 +7,11 @@ import {
   Wand,
   Filter as FilterIcon,
 } from "lucide-react";
+import ShowJobs from "./ShowJobs";
+import NewThread from "./NewThread";
+import Filter from "./ui/Filter";
+import { Button } from "./ui/Button";
+import SearchBar from "./ui/SearchBar";
 
 const Home = () => {
   const [activeComponent, setActiveComponent] = useState(null);
