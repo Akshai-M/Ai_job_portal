@@ -82,6 +82,9 @@ export default function Sidebar() {
 }
 
 function SidebarItem({ icon, text, link }) {
+  const { expanded, isOpen } = useContext(SidebarContext);
+  const pathname = usePathname();
+
   const isActive = pathname === link;
 
   return (
