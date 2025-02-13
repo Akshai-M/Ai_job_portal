@@ -16,7 +16,12 @@ export default function Sidebar() {
 
   return (
     <>
-   
+      <button
+        className="lg:hidden fixed top-4 left-2 z-50 p-2 text-black rounded-md"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <Menu size={24} />
+      </button>
 
       <aside
         className={`h-screen lg:mt-0 bg-[#E4E4E7] shadow-sm flex flex-col fixed top-0 left-0 z-40
