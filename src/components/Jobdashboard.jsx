@@ -80,3 +80,11 @@ export default function Sidebar() {
     </>
   );
 }
+
+function SidebarItem({ icon, text, link }) {
+  const isActive = pathname === link;
+
+  return (
+    
+  );
+}
