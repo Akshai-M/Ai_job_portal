@@ -90,7 +90,9 @@ function SidebarItem({ icon, text, link }) {
   return (
     <Link
       href={link}
-      
+      className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer ${
+        isActive ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-50 hover:text-indigo-800 text-gray-600'
+      }`}
     >
     </Link>
   );
