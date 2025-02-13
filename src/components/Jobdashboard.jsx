@@ -88,6 +88,10 @@ function SidebarItem({ icon, text, link }) {
   const isActive = pathname === link;
 
   return (
-    
+    <Link
+      href={link}
+      
+    >
+    </Link>
   );
 }
