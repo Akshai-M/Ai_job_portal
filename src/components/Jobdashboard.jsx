@@ -50,7 +50,19 @@ export default function Sidebar() {
             </ul>
           </SidebarContext.Provider>
 
-          
+          <div className="flex p-3">
+            <div
+              className={`flex justify-between items-center overflow-hidden transition-all duration-300 ${
+                expanded || isOpen ? 'w-52 ml-3 opacity-100' : 'w-0 opacity-0'
+              }`}
+            >
+              <div className="leading-4">
+                <h4 className="font-semibold">Username</h4>
+                <span className="text-xs text-gray-600">user@gmail.com</span>
+              </div>
+              <MoreVertical size={20} />
+            </div>
+          </div>
         </nav>
       </aside>
 
