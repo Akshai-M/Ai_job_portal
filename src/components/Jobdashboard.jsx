@@ -94,6 +94,14 @@ function SidebarItem({ icon, text, link }) {
         isActive ? 'bg-indigo-800 text-white' : 'hover:bg-indigo-50 hover:text-indigo-800 text-gray-600'
       }`}
     >
+      {icon}
+      <span
+        className={`ml-3 transition-all duration-300 ${
+          expanded || isOpen ? 'opacity-100 w-auto' : 'opacity-0 w-0'
+        }`}
+      >
+        {text}
+      </span>
     </Link>
   );
 }
