@@ -37,7 +37,18 @@ export default function Sidebar() {
             </div>
           </div>
 
-          
+          <SidebarContext.Provider value={{ expanded, isOpen }}>
+            <ul className="flex-1 px-3">
+              <SidebarItem icon={<House size={20} />} text="Home" link="/" />
+              <SidebarItem icon={<Search size={20} />} text="Find" link="/search" />
+              <SidebarItem icon={<Save size={20} />} text="Save" link="/save" />
+              <SidebarItem icon={<Telescope size={20} />} text="Browse" link="/browse" />
+              <hr className="my-2 border-gray-300" />
+              <SidebarItem icon={<Share2 size={20} />} text="Share" link="/billings" />
+              <SidebarItem icon={<Wrench size={20} />} text="Setting" link="/settings" />
+              <SidebarItem icon={<LifeBuoy size={20} />} text="Help" link="/help" />
+            </ul>
+          </SidebarContext.Provider>
 
           
         </nav>
