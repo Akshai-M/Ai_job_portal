@@ -6,7 +6,17 @@ const JobDetails = ({ job }) => {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="bg-white p-8 rounded-xl shadow-lg max-w-7xl w-full">
         
-        
+        <div className="text-lg text-gray-700 space-y-4 mb-8">
+          <p>
+            <span className="font-semibold text-gray-900">Duration:</span> {job.timeDuration}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Location:</span> {job.location}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Description:</span> {job.description}
+          </p>
+        </div>
         <div className="flex gap-4">
           <Button
             onClick={() => {
