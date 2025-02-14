@@ -8,7 +8,18 @@ const JobDetails = ({ job }) => {
         
         
         <div className="flex gap-4">
-         
+          <Button
+            onClick={() => {
+              if (job.applyUrl.startsWith('http')) { 
+                window.location.href = job.applyUrl;
+              } else {
+                console.warn("Internal apply URL not yet implemented:", job.applyUrl);
+              }
+            }}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300"
+          >
+            Apply Here
+          </Button>
 
           <Link href="/">
             <Button className="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300">
