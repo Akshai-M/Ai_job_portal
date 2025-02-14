@@ -6,6 +6,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import LOGO from '@/app/favicon.ico';
+import {
+  House,
+  Search,
+  Save,
+  Telescope,
+  Wrench,
+  Share2,
+  LifeBuoy,
+} from 'lucide-react';
 
 const SidebarContext = createContext();
 
