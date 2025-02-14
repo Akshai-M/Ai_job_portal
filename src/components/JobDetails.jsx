@@ -5,7 +5,17 @@ const JobDetails = ({ job }) => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="bg-white p-8 rounded-xl shadow-lg max-w-7xl w-full">
-        
+        <div className="flex items-center mb-6">
+          <img
+            src={job.logo}
+            alt={`${job.company} Logo`}
+            className="w-16 h-16 mr-6"
+          />
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">{job.title}</h1>
+            <p className="text-lg text-gray-600">{job.company}</p>
+          </div>
+        </div>
         <div className="text-lg text-gray-700 space-y-4 mb-8">
           <p>
             <span className="font-semibold text-gray-900">Duration:</span> {job.timeDuration}
