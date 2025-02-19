@@ -42,7 +42,24 @@ const SearchBar = () => {
                     ${isFocused ? "border-black shadow-lg shadow-blue-100" : "border-black hover:border-gray-400"}
                 `}
             >
-                
+                <div className="grid place-items-center h-full w-12">
+                    <Search className="h-5 w-5 text-gray-500" />
+                </div>
+
+                <input
+                    type="text"
+                    placeholder="Search for jobs, companies, or keywords..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => setIsFocused(false)}
+                    className="
+                        w-full h-full pr-12 pl-0
+                        text-gray-700 outline-none 
+                        placeholder:text-gray-500
+                        bg-transparent
+                    "
+                />
 
                 {searchQuery && (
                     <Button
