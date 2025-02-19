@@ -27,9 +27,24 @@ export default function Filter() {
                     </div>
                 </div>
 
-               
+                <div className="space-y-1">
+                    <label className="text-black dark:text-white text-base">Remote</label>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                        Filter jobs by whether they are remote or not
+                    </p>
+                    <div className="relative mt-2">
+                        <select className="w-full bg-white dark:bg-[#1E1E1E] border border-gray-300 dark:border-[#333333] rounded-md px-4 py-3 appearance-none text-black dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-[#333333]">
+                            <option>No preference</option>
+                            <option>Remote only</option>
+                            <option>Office only</option>
+                            <option>Hybrid</option>
+                        </select>
+                        <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-gray-400 pointer-events-none h-5 w-5" />
+                    </div>
+                </div>
             </div>
 
+            
         </div>
     );
 }
