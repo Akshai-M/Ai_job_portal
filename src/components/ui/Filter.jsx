@@ -44,7 +44,29 @@ export default function Filter() {
                 </div>
             </div>
 
-           
+            <div className="space-y-1">
+                <label className="text-black dark:text-white text-base">Minimum annual salary</label>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Filter jobs by minimum annual salary
+                </p>
+                <div className="flex gap-2 mt-2">
+                    <div className="relative w-[100px]">
+                        <select className="w-full bg-white dark:bg-[#1E1E1E] border border-gray-300 dark:border-[#333333] rounded-md px-4 py-3 appearance-none text-black dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-[#333333]">
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                        </select>
+                        <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-gray-400 pointer-events-none h-5 w-5" />
+                    </div>
+                    <input
+                        type="number"
+                        value={salary}
+                        onChange={(e) => setSalary(e.target.value)}
+                        className="flex-1 bg-white dark:bg-[#1E1E1E] border border-gray-300 dark:border-[#333333] rounded-md px-4 py-3 text-black dark:text-white focus:outline-none focus:border-gray-400 dark:focus:border-[#333333]"
+                        placeholder="0"
+                    />
+                </div>
+            </div>
 
             <div className="space-y-1">
                 <label className="text-black dark:text-white text-base">Experience (months)</label>
