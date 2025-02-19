@@ -67,7 +67,14 @@ export default function Filter() {
                 </div>
             </div>
 
-           
+            <div className="flex gap-3 pt-6">
+                <Button className="flex-1 bg-indigo-600 dark:bg-[#4A3ECC] hover:bg-indigo-500 dark:hover:bg-[#313272] text-white font-medium py-3 px-4 rounded-md transition-colors">
+                    Apply filters
+                </Button>
+                <Button className="flex-1 bg-gray-200 dark:bg-[#27272A] hover:bg-gray-300 dark:hover:bg-black text-black dark:text-white font-medium py-3 px-4 rounded-md transition-colors border border-gray-300 dark:border-[#333333]">
+                    Reset filters
+                </Button>
+            </div>
         </div>
     );
 }
