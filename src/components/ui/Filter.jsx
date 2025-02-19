@@ -44,7 +44,30 @@ export default function Filter() {
                 </div>
             </div>
 
-            
+           
+
+            <div className="space-y-1">
+                <label className="text-black dark:text-white text-base">Experience (months)</label>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Filter jobs by the number of months you have been working
+                </p>
+                <div className="relative mt-4">
+                    <input
+                        type="range"
+                        min="0"
+                        max="24"
+                        value={jobAge}
+                        onChange={(e) => setJobAge(Number(e.target.value))}
+                        className="w-full h-1 bg-gray-300 dark:bg-[#333333] rounded-lg appearance-none cursor-pointer accent-indigo-8 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:bg-black dark:[&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:appearance-none"
+                        style={{ background: `linear-gradient(to right, #6366F1 ${jobAge / 24 * 100}%, #333333 ${jobAge / 24 * 100}%)` }}
+                    />
+                    <span className="absolute -bottom-6 left-0 text-sm text-gray-600 dark:text-gray-400">
+                        {jobAge} months
+                    </span>
+                </div>
+            </div>
+
+           
         </div>
     );
 }
