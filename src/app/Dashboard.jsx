@@ -99,7 +99,7 @@ const Sidebar = () => {
 
       {/* Desktop Sidebar */}
       <aside
-        className={`bg-[#E4E4E7] px-5 border border-red-600 text-gray-700 h-screen fixed top-0 left-0 z-30 transition-all duration-300 lg:flex flex-col ${
+        className={`bg-[#E4E4E7] px-5 border text-gray-700 h-screen fixed top-0 left-0 z-30 transition-all duration-300 lg:flex flex-col ${
           isSidebarOpen ? "w-64" : "w-24"
         } hidden lg:flex`}
         onMouseEnter={handleSidebarMouseEnter}
