@@ -100,7 +100,38 @@ export default function Home() {
       <main className="flex-grow p-6 space-y-12 overflow-y-auto">
         {/* Featured Jobs */}
         <h2 className="text-2xl font-semibold">Featured Jobs</h2>
-        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {jobCards.map((job) => (
+            <div
+              key={job.id}
+              className="p-4 border rounded-lg shadow-md hover:shadow-2xl transition-all duration-300"
+            >
+              <img src={job.logo} alt={job.company} className="w-12 h-12 mb-3" />
+              <h3 className="text-lg font-bold">{job.title}</h3>
+              <p className="text-gray-600">{job.company}</p>
+              <p className="text-sm mt-2">{job.location}</p>
+              <p className="text-sm text-gray-500">Salary: {job.salary} LPA</p>
+              <p className="text-sm text-gray-500">Experience: {job.experience}</p>
+              <div className="flex flex-wrap gap-2 mt-3">
+                {job.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <a
+                href={job.applyUrl}
+                target="_blank"
+                className="mt-4 block text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                Apply Now
+              </a>
+            </div>
+          ))}
+        </div>
 
         <Cardscroller />
 
