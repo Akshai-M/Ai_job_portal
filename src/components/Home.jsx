@@ -102,6 +102,8 @@ export default function Home() {
         <h2 className="text-2xl font-semibold">Featured Jobs</h2>
         
 
+        <Cardscroller />
+
         {/* Popular Categories */}
         <h2 className="text-2xl font-semibold">Popular Categories</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
