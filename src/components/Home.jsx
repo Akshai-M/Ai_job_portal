@@ -1,103 +1,135 @@
-"use client"
-import React, { useState, useRef, useEffect } from "react";
+"use client";
+import Cardscroller from "./Cardscroller";
 
-import {
-  MessageSquareDiff,
-  Upload,
-  Wand,
-  Filter as FilterIcon,
-} from "lucide-react";
-import ShowJobs from "./ShowJobs";
-import NewThread from "./NewThread";
-import Filter from "./ui/Filter";
-import { Button } from "./ui/Button";
-import SearchBar from "./ui/SearchBar";
+const jobCards = [
+  {
+    id: 1,
+    title: "Senior Frontend Developer",
+    company: "Google",
+    logo: "/logo.png", // Replace LOGO with the actual path or import
+    experience: "3+ years",
+    salary: "15-20 LPA",
+    timeDuration: "Full-time",
+    location: "Mountain View, CA",
+    startsIn: "3 days",
+    skills: ["CSS", "React", "JavaScript"],
+    description:
+      "Lead the development of cutting-edge web applications and collaborate with teams.",
+    applyUrl: "https://www.microsoft.com",
+  },
+  {
+    id: 2,
+    title: "Product Designer",
+    company: "Airbnb",
+    logo: "/logo.png",
+    experience: "2+ years",
+    salary: "10-15 LPA",
+    timeDuration: "Part-time",
+    location: "San Francisco, CA",
+    startsIn: "5 days",
+    skills: ["UI/UX", "Figma", "Prototyping"],
+    description:
+      "Design intuitive and user-friendly product interfaces with a focus on user experience.",
+    applyUrl: "https://www.microsoft.com",
+  },
+  {
+    id: 3,
+    title: "Backend Engineer",
+    company: "Amazon",
+    logo: "/logo.png",
+    experience: "4+ years",
+    salary: "20-25 LPA",
+    timeDuration: "Full-time",
+    location: "Seattle, WA",
+    startsIn: "7 days",
+    skills: ["Node.js", "MongoDB", "AWS"],
+    description:
+      "Build and maintain scalable backend services powering millions of users.",
+    applyUrl: "https://www.microsoft.com",
+  },
+  {
+    id: 4,
+    title: "Senior Frontend Developer",
+    company: "Google",
+    logo: "/logo.png", // Replace LOGO with the actual path or import
+    experience: "3+ years",
+    salary: "15-20 LPA",
+    timeDuration: "Full-time",
+    location: "Mountain View, CA",
+    startsIn: "3 days",
+    skills: ["CSS", "React", "JavaScript"],
+    description:
+      "Lead the development of cutting-edge web applications and collaborate with teams.",
+    applyUrl: "https://www.microsoft.com",
+  },
+  {
+    id: 5,
+    title: "Product Designer",
+    company: "Airbnb",
+    logo: "/logo.png",
+    experience: "2+ years",
+    salary: "10-15 LPA",
+    timeDuration: "Part-time",
+    location: "San Francisco, CA",
+    startsIn: "5 days",
+    skills: ["UI/UX", "Figma", "Prototyping"],
+    description:
+      "Design intuitive and user-friendly product interfaces with a focus on user experience.",
+    applyUrl: "https://www.microsoft.com",
+  },
+  {
+    id: 6,
+    title: "Backend Engineer",
+    company: "Amazon",
+    logo: "/logo.png",
+    experience: "4+ years",
+    salary: "20-25 LPA",
+    timeDuration: "Full-time",
+    location: "Seattle, WA",
+    startsIn: "7 days",
+    skills: ["Node.js", "MongoDB", "AWS"],
+    description:
+      "Build and maintain scalable backend services powering millions of users.",
+    applyUrl: "https://www.microsoft.com",
+  },
+];
 
-const Home = () => {
-  const [activeComponent, setActiveComponent] = useState(null);
-
-  const [filterModalOpen, setFilterModalOpen] = useState(false);
-
-  const filterModalRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        filterModalRef.current &&
-        !filterModalRef.current.contains(event.target)
-      ) {
-        setFilterModalOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
+export default function Home() {
   return (
-    <div className="max-w-3xl w-full mx-auto lg:mt-0 mt-10 p-8 overflow-hidden min-h-[400px]">
-      {activeComponent === "jobs" && <ShowJobs />}
+    <div className="max-w-7xl mx-auto flex">
+      <main className="flex-grow p-6 space-y-12 overflow-y-auto">
+        {/* Featured Jobs */}
+        <h2 className="text-2xl font-semibold">Featured Jobs</h2>
+        
 
-      {activeComponent === "thread" && <NewThread />}
-
-      {filterModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-20 flex justify-center items-center">
-          <div
-            ref={filterModalRef}
-            className="bg-white p-6 rounded-lg max-w-max space-y-8"
-          >
-            <Filter />
-          </div>
+        {/* Popular Categories */}
+        <h2 className="text-2xl font-semibold">Popular Categories</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            "Banking",
+            "Work From Home",
+            "HR",
+            "Sales",
+            "Accounting",
+            "Customer Support",
+            "Event Management",
+            "IT",
+            "SQL",
+            "Oracle",
+            "Graphic Design",
+            "Digital Marketing",
+          ].map((category, index) => (
+            <div
+              key={index}
+              className="p-4 rounded-full bg-gradient-to-r from-blue-200 to-blue-300 text-center hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 hover:text-white transition-colors cursor-pointer"
+            >
+              <span className="inline-block px-4 py-2 rounded-full">
+                {category}
+              </span>
+            </div>
+          ))}
         </div>
-      )}
-
-      
-      <div className=" w-72 lg:w-auto lg:p-0 p-2 mx-auto absolute bottom-4 lg:bottom-10">
-        <div className="lg:flex w-full justify-center gap-6 mb-1 lg:mb-8">
-          <button
-            className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-2 px-6 py-3 text-lg font-semibold bg-transparent border border-white text-black bg-indigo-600 rounded-lg"
-            onClick={() =>
-              setActiveComponent(activeComponent === "jobs" ? null : "jobs")
-            }
-          >
-            <Wand className="h-5 w-5" />
-            Match Jobs
-          </button>
-
-          <button className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-1 px-6 py-3 text-lg font-semibold bg-transparent border border-black text-black bg-indigo-300 rounded-lg">
-            <Upload className="h-5 w-5" />
-            Upload Resume
-          </button>
-
-          <button
-            className="flex items-center gap-2 h-10 lg:h-auto w-full lg:w-[10rem] lg:p-2 px-6 py-3 text-lg font-semibold bg-transparent border border-black text-black bg-indigo-300 rounded-lg"
-            onClick={() =>
-              setActiveComponent(activeComponent === "thread" ? null : "thread")
-            }
-          >
-            <MessageSquareDiff className="h-5 w-5" />
-            New Thread
-          </button>
-        </div>
-
-        <div className="flex lg:w-full items-center justify-center gap-4">
-          <Button
-            variant="outline"
-            className="flex items-center gap-2 px-4 py-2 border border-black text-gray-700 hover:bg-gray-100 rounded-lg"
-            onClick={() => setFilterModalOpen(!filterModalOpen)}
-          >
-            <FilterIcon className="h-5 w-5" />
-            Filter
-          </Button>
-
-          <SearchBar className="w-full max-w-lg" />
-        </div>
-      </div>
+      </main>
     </div>
   );
-};
-
-export default Home;
+}
