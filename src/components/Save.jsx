@@ -49,7 +49,20 @@ const Bookmark = () => {
           </div>
 
           <table className="min-w-full divide-y divide-gray-200 table-auto">
-            
+            <thead>
+              <tr className="bg-gray-50 border-2">
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                  Job Title
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                  Created
+                </th>
+                <th className="px-4 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                  Action
+                </th>
+                
+              </tr>
+            </thead>
             
           </table>
         </div>
