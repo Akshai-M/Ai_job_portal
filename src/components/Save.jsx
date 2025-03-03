@@ -28,7 +28,11 @@ const Bookmark = () => {
             </p>
           </div>
         </div>
-       
+        <div className="flex justify-center mt-5">
+          <Button className="w-72 bg-indigo-600 text-white">
+            Create your own thread
+          </Button>
+        </div>
       </div>
       
     </>
