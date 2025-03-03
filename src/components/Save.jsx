@@ -34,7 +34,15 @@ const Bookmark = () => {
           </Button>
         </div>
       </div>
-      
+      <div className="w-1/2 mx-auto bg-white rounded-lg shadow-md p-6">
+        <div className="w-full">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            Saved Jobs
+          </h2>
+
+          
+        </div>
+      </div>
     </>
   );
 };
