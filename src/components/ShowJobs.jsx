@@ -20,7 +20,22 @@ function ShowJobs() {
         "Lead the development of cutting-edge web applications and collaborate with teams.",
       applyUrl: "https://www.microsoft.com",
     },
-    
+    {
+      id: 2,
+      title: "Product Designer",
+      company: "Airbnb",
+      logo: LOGO,
+      experience: "2+ years",
+      salary: "10-15",
+      timeDuration: "Part-time",
+      location: "San Francisco, CA",
+      startsIn: "5 days",
+      skills: ["UI/UX", "Figma", "Prototyping"],
+      description:
+        "Design intuitive and user-friendly product interfaces with a focus on user experience.",
+      applyUrl: "https://www.microsoft.com",
+    },
+
   ];
 
   return (
