@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const companies = [
-  { id: 1, name: "Accenture", logo: '"https://www.companieslogo.com/img/orig/ACN-cce5b411.png?download=true"' },
+  { id: 1, name: "Accenture", logo: "https://www.companieslogo.com/img/orig/ACN-cce5b411.png?download=true" },
   { id: 2, name: "Microsoft", logo: "https://logodix.com/logo/991017.png" },
   { id: 3, name: "Amazon", logo: "https://pngteam.com/images/amazon-logo-png-1121x922_abf78dd4_transparent_202461.png.png" },
   { id: 4, name: "Facebook", logo: "https://static.vecteezy.com/system/resources/previews/023/986/516/original/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png" },
@@ -30,17 +30,17 @@ export default function Cardscroller() {
     };
 
     return (
-        <div id="example" className="relative w-full max-w-md mx-auto flex flex-col items-center">
-            <h2 className="text-2xl font-semibold mb-4">Card Scroller</h2>
+        <div id="example" className="relative  w-full h-48 max-w-5xl mx-auto flex flex-col items-center">
+            <h2 className="text-2xl text-[#121224] font-semibold mb-4">Card Scroller</h2>
 
         
             <div className="relative w-full overflow-hidden border p-4 rounded-lg bg-gray-100 flex items-center">
          
                 <button
                     onClick={moveLeft}
-                    className="absolute left-2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition"
+                    className="relative left-0 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition"
                 >
-                    <ChevronLeft size={24} />
+                    <ChevronLeft className='text-black' size={24} />
                 </button>
 
            
@@ -48,10 +48,8 @@ export default function Cardscroller() {
                   {companies.map((company) => (
                     <li key={company.id} className="card">
                       <img
-                        src={company.logo}
-                        alt={company.name}
-                        className="w-full h-16 object-contain cursor-pointer"
-                      />
+  
+/>
                     </li>
                   ))}
                 </ul>
@@ -59,9 +57,9 @@ export default function Cardscroller() {
           
                 <button
                     onClick={moveRight}
-                    className="absolute right-2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition"
+                    className="relative right-2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-200 transition"
                 >
-                    <ChevronRight size={24} />
+                    <ChevronRight className='text-black' size={24} />
                 </button>
             </div>
 
