@@ -21,7 +21,17 @@ const SearchBar = () => {
             shadow-lg py-2 divide-y divide-gray-100
           "
         >
-          
+          <div className="px-4 py-2 hover:bg-gray-50 cursor-pointer">
+            <p className="text-sm text-gray-600">
+              Suggested: <span className="text-gray-900">{searchQuery}</span>
+            </p>
+          </div>
+          <div className="px-4 py-2 hover:bg-gray-50 cursor-pointer">
+            <p className="text-sm text-gray-600">Popular: Software Engineer</p>
+          </div>
+          <div className="px-4 py-2 hover:bg-gray-50 cursor-pointer">
+            <p className="text-sm text-gray-600">Popular: Product Manager</p>
+          </div>
         </div>
       )}
 
