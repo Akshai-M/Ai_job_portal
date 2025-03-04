@@ -37,7 +37,20 @@ const SearchBar = () => {
        
 
    
-        
+        <input
+          type="text"
+          placeholder="Search for jobs, companies, or keywords..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(false)}
+          className="
+            flex-1 h-full pr-10 pl-2
+            text-gray-700 outline-none 
+            placeholder:text-gray-500
+            bg-transparent text-sm sm:text-base 
+          "
+        />
 
        
       </div>
