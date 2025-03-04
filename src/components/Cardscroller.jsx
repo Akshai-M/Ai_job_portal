@@ -10,6 +10,12 @@ const companies = [
   { id: 4, name: "Facebook", logo: "https://static.vecteezy.com/system/resources/previews/023/986/516/original/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png" },
   { id: 5, name: "Google", logo: "https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?fit=1000%2C1000&ssl=1" },
   { id: 6, name: "Netflix", logo: "https://pngimg.com/uploads/netflix/netflix_PNG8.png" },
+  { id: 7, name: "Accenture", logo: "https://www.companieslogo.com/img/orig/ACN-cce5b411.png?download=true" },
+  { id: 8, name: "Microsoft", logo: "https://logodix.com/logo/991017.png" },
+  { id: 9, name: "Amazon", logo: "https://pngteam.com/images/amazon-logo-png-1121x922_abf78dd4_transparent_202461.png.png" },
+  { id: 10, name: "Facebook", logo: "https://static.vecteezy.com/system/resources/previews/023/986/516/original/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png" },
+  { id: 11, name: "Google", logo: "https://i0.wp.com/nanophorm.com/wp-content/uploads/2018/04/google-logo-icon-PNG-Transparent-Background.png?fit=1000%2C1000&ssl=1" },
+  { id: 12, name: "Netflix", logo: "https://pngimg.com/uploads/netflix/netflix_PNG8.png" },
 ];
 
 export default function Cardscroller() {
