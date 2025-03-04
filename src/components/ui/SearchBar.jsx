@@ -64,7 +64,19 @@ const SearchBar = () => {
           "
         />
 
-       
+        {searchQuery && (
+          <Button
+            onClick={handleClear}
+            className="
+              absolute right-0 grid place-items-center 
+              h-full w-10 sm:w-12 text-gray-500
+              hover:text-gray-700 transition-colors
+            "
+            aria-label="Clear search"
+          >
+            <X className="h-5 w-5" />
+          </Button>
+        )}
       </div>
     </div>
   )
