@@ -54,7 +54,9 @@ export default function Cardscroller() {
                   {companies.map((company) => (
                     <li key={company.id} className="card">
                       <img
-  
+  src={company.logo}
+  alt={company.name}
+  className="w-16 h-16 object-fit cursor-pointer"
 />
                     </li>
                   ))}
