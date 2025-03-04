@@ -44,7 +44,9 @@ const SearchBar = () => {
         `}
       >
       
-       
+        <div className="grid place-items-center h-full w-10 sm:w-12">
+          <Search className="h-5 w-5 text-gray-500" />
+        </div>
 
    
         <input
