@@ -63,7 +63,72 @@ const Bookmark = () => {
                 
               </tr>
             </thead>
-            
+            <tbody>
+              <tr className="hover:bg-gray-50 border-2 ">
+                <td className="px-4 py-3 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    Python Developer
+                  </div>
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                  February 4, 2025
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-right text-sm font-medium  items-center justify-end">
+                  {" "}
+                  
+                  <a
+                    href="#"
+                    className="text-red-600 hover:text-red-900 flex items-center"
+                  >
+                    <Trash2 className="h-4 w-4 mr-1" /> 
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-50 border-2 ">
+                <td className="px-4 py-3 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    Python Developer
+                  </div>
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                  February 4, 2025
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-right text-sm font-medium  items-center justify-end">
+                  {" "}
+                  
+                  <a
+                    href="#"
+                    className="text-red-600 hover:text-red-900 flex items-center"
+                  >
+                    <Trash2 className="h-4 w-4 mr-1" /> 
+                    Delete
+                  </a>
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-50 border-2 ">
+                <td className="px-4 py-3 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    Python Developer
+                  </div>
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-500">
+                  February 4, 2025
+                </td>
+                <td className="px-4 py-3 whitespace-nowrap text-right text-sm font-medium  items-center justify-end">
+                  {" "}
+                  
+                  <a
+                    href="#"
+                    className="text-red-600 hover:text-red-900 flex items-center"
+                  >
+                    <Trash2 className="h-4 w-4 mr-1" /> 
+                    Delete
+                  </a>
+                </td>
+              </tr>
+             
+            </tbody>
           </table>
         </div>
       </div>
