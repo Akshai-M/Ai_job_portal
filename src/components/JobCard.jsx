@@ -25,7 +25,20 @@ const JobCard = ({ job }) => {
 
      
 
-     
+      <div className="flex flex-wrap gap-2 mt-3">
+        {job.skills && job.skills.length > 0 ? (
+          job.skills.map((skill, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-xs bg-indigo-100 text-indigo-600 border border-indigo-300 rounded-lg"
+            >
+              {skill}
+            </span>
+          ))
+        ) : (
+          <span className="text-gray-500 text-xs">No skills listed</span>
+        )}
+      </div>
 
       <div className="flex justify-between items-center mt-4">
         <p className="text-sm text-gray-500">
