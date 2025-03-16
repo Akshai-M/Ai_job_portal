@@ -35,7 +35,66 @@ function ShowJobs() {
         "Design intuitive and user-friendly product interfaces with a focus on user experience.",
       applyUrl: "https://www.microsoft.com",
     },
-
+    {
+      id: 3,
+      title: "Backend Engineer",
+      company: "Amazon",
+      logo: LOGO,
+      experience: "4+ years",
+      salary: "20-25",
+      timeDuration: "Full-time",
+      location: "Seattle, WA",
+      startsIn: "7 days",
+      skills: ["Node.js", "MongoDB", "AWS"],
+      description:
+        "Build and maintain scalable backend services powering millions of users.",
+      applyUrl: "https://www.microsoft.com",
+    },
+    {
+      id: 4,
+      title: "Senior Frontend Developer",
+      company: "Google",
+      logo: LOGO,
+      experience: "3+ years",
+      salary: "15-20",
+      timeDuration: "Full-time",
+      location: "Mountain View, CA",
+      startsIn: "3 days",
+      skills: ["CSS", "React", "JavaScript"],
+      description:
+        "Lead the development of cutting-edge web applications and collaborate with teams.",
+      applyUrl: "https://www.microsoft.com",
+    },
+    {
+      id: 5,
+      title: "Product Designer",
+      company: "Airbnb",
+      logo: LOGO,
+      experience: "2+ years",
+      salary: "10-15",
+      timeDuration: "Part-time",
+      location: "San Francisco, CA",
+      startsIn: "5 days",
+      skills: ["UI/UX", "Figma", "Prototyping"],
+      description:
+        "Design intuitive and user-friendly product interfaces with a focus on user experience.",
+      applyUrl: "https://www.microsoft.com",
+    },
+    {
+      id: 6,
+      title: "Backend Engineer",
+      company: "Amazon",
+      logo: LOGO,
+      experience: "4+ years",
+      salary: "20-25",
+      timeDuration: "Full-time",
+      location: "Seattle, WA",
+      startsIn: "7 days",
+      skills: ["Node.js", "MongoDB", "AWS"],
+      description:
+        "Build and maintain scalable backend services powering millions of users.",
+      applyUrl: "https://www.microsoft.com",
+    },
   ];
 
   return (
