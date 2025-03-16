@@ -56,7 +56,21 @@ function Setting() {
             </h2>
             <div className="h-40 overflow-y-auto scrollbar-hide border p-2 rounded">
               {" "}
-             
+              {notifyOn.map((industry, index) => (
+                <div key={index} className="flex items-center mb-2">
+                  <input
+                    type="checkbox"
+                    id={`industry-${index}`}
+                    className="mr-2 h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-2 focus:ring-indigo-200"
+                  />
+                  <label
+                    htmlFor={`industry-${index}`}
+                    className="text-gray-700"
+                  >
+                    {industry}
+                  </label>
+                </div>
+              ))}
             </div>
 
             <h2 className="text-xl font-semibold text-gray-800 mt-6 mb-4">
