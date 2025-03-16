@@ -1,12 +1,49 @@
 "use client";
+import { FaLocationDot, } from "react-icons/fa6";
+import { FaRupeeSign } from "react-icons/fa";
+import { TbBriefcase2,  } from "react-icons/tb";
 import Cardscroller from "./Cardscroller";
+import SearchBar from "./ui/SearchBar";
+import {
+  Banknote,
+  Building,
+  Users,
+  TrendingUp,
+  Calculator,
+  Headphones,
+  Calendar,
+  Laptop,
+  Database,
+  Code2,
+  Brush,
+  Megaphone,
+ 
+} from "lucide-react";
+
+
+const categoryIcons = {
+  Banking: <Banknote />,
+  "Work From Home": <Building />,
+  HR: <Users />,
+  Sales: <TrendingUp />,
+  Accounting: <Calculator />,
+  "Customer Support": <Headphones />,
+  "Event Management": <Calendar />,
+  IT: <Laptop />,
+  SQL: <Database />,
+  Oracle: <Code2 />,
+  "Graphic Design": <Brush />,
+  "Digital Marketing": <Megaphone />,
+};
+
+
 
 const jobCards = [
   {
     id: 1,
     title: "Senior Frontend Developer",
     company: "Google",
-    logo: "/logo.png", // Replace LOGO with the actual path or import
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "3+ years",
     salary: "15-20 LPA",
     timeDuration: "Full-time",
@@ -21,7 +58,7 @@ const jobCards = [
     id: 2,
     title: "Product Designer",
     company: "Airbnb",
-    logo: "/logo.png",
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "2+ years",
     salary: "10-15 LPA",
     timeDuration: "Part-time",
@@ -36,7 +73,7 @@ const jobCards = [
     id: 3,
     title: "Backend Engineer",
     company: "Amazon",
-    logo: "/logo.png",
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "4+ years",
     salary: "20-25 LPA",
     timeDuration: "Full-time",
@@ -51,7 +88,7 @@ const jobCards = [
     id: 4,
     title: "Senior Frontend Developer",
     company: "Google",
-    logo: "/logo.png", // Replace LOGO with the actual path or import
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "3+ years",
     salary: "15-20 LPA",
     timeDuration: "Full-time",
@@ -66,7 +103,7 @@ const jobCards = [
     id: 5,
     title: "Product Designer",
     company: "Airbnb",
-    logo: "/logo.png",
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "2+ years",
     salary: "10-15 LPA",
     timeDuration: "Part-time",
@@ -81,9 +118,9 @@ const jobCards = [
     id: 6,
     title: "Backend Engineer",
     company: "Amazon",
-    logo: "/logo.png",
+    logo: "https://connect-assets.prosple.com/cdn/ff/5DCs8JrEwzITnwvZ1hm7pIiadZS5O-OPcpQCujFj0yg/1652245146/public/inline-images/logo-ey-2022.jpeg",
     experience: "4+ years",
-    salary: "20-25 LPA",
+    salary: "Not disclosed ",
     timeDuration: "Full-time",
     location: "Seattle, WA",
     startsIn: "7 days",
@@ -96,73 +133,113 @@ const jobCards = [
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto flex">
+    <div className="max-w-7xl mx-auto flex flex-col min-h-screen">
       <main className="flex-grow p-6 space-y-12 overflow-y-auto">
         {/* Featured Jobs */}
-        <h2 className="text-2xl font-semibold">Featured Jobs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {jobCards.map((job) => (
-            <div
-              key={job.id}
-              className="p-4 border rounded-lg shadow-md hover:shadow-2xl transition-all duration-300"
-            >
-              <img src={job.logo} alt={job.company} className="w-12 h-12 mb-3" />
-              <h3 className="text-lg font-bold">{job.title}</h3>
-              <p className="text-gray-600">{job.company}</p>
-              <p className="text-sm mt-2">{job.location}</p>
-              <p className="text-sm text-gray-500">Salary: {job.salary} LPA</p>
-              <p className="text-sm text-gray-500">Experience: {job.experience}</p>
-              <div className="flex flex-wrap gap-2 mt-3">
-                {job.skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-              <a
-                href={job.applyUrl}
-                target="_blank"
-                className="mt-4 block text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-              >
-                Apply Now
-              </a>
+        <div className="p-8">
+  <h2 className="text-3xl font-bold text-[#121224] mb-8 text-center">
+    Featured Jobs
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {jobCards.map((job) => (
+      <div
+        key={job.id}
+        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+      >
+        <div className="p-6">
+          <div className="flex items-center mb-4">
+            <img
+              src={job.logo}
+              alt={job.company}
+              className="w-20 h-20 rounded-lg mr-4 object-cover"
+            />
+            <div>
+              <h3 className="text-lg font-bold text-[#121224]">
+                {job.title}
+              </h3>
+              <p className="text-sm text-gray-600">{job.company}</p>
             </div>
-          ))}
+          </div>
+          <div className="flex flex-wrap gap-4 mb-4">
+            <div className="flex">  
+            <span className="text-sm text-gray-600 pr-1"><FaLocationDot /> </span>
+              <span className="text-sm text-gray-600">{job.location}</span>
+            </div>
+            <div className="flex">
+              <span className="text-sm font-medium text-gray-700 pt-[1px]"><FaRupeeSign /></span>
+              <span className="text-sm text-gray-600">{job.salary}</span>
+            </div>
+            <div className="flex ">
+              <span className="text-sm font-medium text-gray-700 pr-1 pt-[2px]"><TbBriefcase2 /></span>
+              <span className="text-sm text-gray-600">{job.experience}</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2 ">
+            {job.skills.map((skill, index) => (
+              <span
+                key={index}
+                className="text-xs bg-blue-100 text-[#4969E1] px-3 py-1 rounded-lg font-medium"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
+        <div className="bg-gray-50 p-4 text-center border-t border-gray-200">
+          <a
+            href={job.applyUrl}
+            target="_blank"
+            className="inline-block px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition"
+          >
+            Apply Now
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         <Cardscroller />
 
-        {/* Popular Categories */}
-        <h2 className="text-2xl font-semibold">Popular Categories</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            "Banking",
-            "Work From Home",
-            "HR",
-            "Sales",
-            "Accounting",
-            "Customer Support",
-            "Event Management",
-            "IT",
-            "SQL",
-            "Oracle",
-            "Graphic Design",
-            "Digital Marketing",
-          ].map((category, index) => (
-            <div
-              key={index}
-              className="p-4 rounded-full bg-gradient-to-r from-blue-200 to-blue-300 text-center hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-500 hover:text-white transition-colors cursor-pointer"
-            >
-              <span className="inline-block px-4 py-2 rounded-full">
-                {category}
-              </span>
-            </div>
-          ))}
+        <div className="p-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+            Popular Categories
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              "Banking",
+              "Work From Home",
+              "HR",
+              "Sales",
+              "Accounting",
+              "Customer Support",
+              "Event Management",
+              "IT",
+              "SQL",
+              "Oracle",
+              "Graphic Design",
+              "Digital Marketing",
+            ].map((category, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 rounded-lg bg-gray-100 hover:bg-blue-600 hover:text-white transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md"
+              >
+                <span className="mr-2 text-blue-600 group-hover:text-white">
+                  {categoryIcons[category]}
+                </span>
+                <span className="font-semibold text-gray-600 group-hover:text-white">
+                  {category}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
+      <div className="sticky bottom-0 w-full bg-white p-4 z-10 border-t md:px-10 lg:px-20">
+  <SearchBar />
+</div>
+
     </div>
   );
 }
