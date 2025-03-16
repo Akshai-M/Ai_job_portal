@@ -41,7 +41,32 @@ function Setting() {
       </div>
 
       <div className="h-[400px] overflow-hidden">
-       
+        {activeTab === "general" && (
+          <div>
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">Email</h2>
+            <p className=" border cursor-not-allowed mb-4 rounded-md px-3 py-2 text-gray-600">
+              {usermail}
+            </p>
+            <p className="text-gray-500 text-sm ">
+              This is so we can intro you to jobs that fit your the data in your
+              wallet.
+            </p>
+
+            <h2 className="text-xl font-semibold text-gray-800 mt-24 mb-4">
+              Wallet Address
+            </h2>
+            <input
+              type="text"
+              placeholder="Enter your wallet address"
+              className="w-full px-4 py-2 border cursor-not-allowed rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
+            />
+            <p className="text-gray-500 text-sm">
+              This is your on-chain wallet address where you'll store your
+              resume, skills, and other data to be used for the jobs you apply
+              to.
+            </p>
+          </div>
+        )}
 
         {activeTab === "appearance" && (
           <div>
