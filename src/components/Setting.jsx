@@ -62,7 +62,19 @@ function Setting() {
             <h2 className="text-xl font-semibold text-gray-800 mt-6 mb-4">
               Email Notifications
             </h2>
-          
+            <div className="flex items-center mb-4">
+              <input
+                type="checkbox"
+                id="newsletter"
+                className="mr-2 h-4 w-4 rounded border-gray-300 text-indigo-600"
+              />
+              <label htmlFor="newsletter" className="text-gray-700">
+                Newsletter emails{" "}
+                <span className="text-gray-500 text-sm">
+                  (Receive emails about recent news, jobs, etc.)
+                </span>
+              </label>
+            </div>
             <button className="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md mt-4">
               Update notifications
             </button>
