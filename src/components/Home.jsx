@@ -1,7 +1,7 @@
 "use client";
-import { FaLocationDot, } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import { FaRupeeSign } from "react-icons/fa";
-import { TbBriefcase2,  } from "react-icons/tb";
+import { TbBriefcase2 } from "react-icons/tb";
 import Cardscroller from "./Cardscroller";
 import SearchBar from "./ui/SearchBar";
 import {
@@ -17,9 +17,7 @@ import {
   Code2,
   Brush,
   Megaphone,
- 
 } from "lucide-react";
-
 
 const categoryIcons = {
   Banking: <Banknote />,
@@ -35,8 +33,6 @@ const categoryIcons = {
   "Graphic Design": <Brush />,
   "Digital Marketing": <Megaphone />,
 };
-
-
 
 const jobCards = [
   {
@@ -137,68 +133,79 @@ export default function Home() {
       <main className="flex-grow p-6 space-y-12 overflow-y-auto">
         {/* Featured Jobs */}
         <div className="p-8">
-  <h2 className="text-3xl font-bold text-[#121224] mb-8 text-center">
-    Featured Jobs
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    {jobCards.map((job) => (
-      <div
-        key={job.id}
-        className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-      >
-        <div className="p-6">
-          <div className="flex items-center mb-4">
-            <img
-              src={job.logo}
-              alt={job.company}
-              className="w-20 h-20 rounded-lg mr-4 object-cover"
-            />
-            <div>
-              <h3 className="text-lg font-bold text-[#121224]">
-                {job.title}
-              </h3>
-              <p className="text-sm text-gray-600">{job.company}</p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-4 mb-4">
-            <div className="flex">  
-            <span className="text-sm text-gray-600 pr-1"><FaLocationDot /> </span>
-              <span className="text-sm text-gray-600">{job.location}</span>
-            </div>
-            <div className="flex">
-              <span className="text-sm font-medium text-gray-700 pt-[1px]"><FaRupeeSign /></span>
-              <span className="text-sm text-gray-600">{job.salary}</span>
-            </div>
-            <div className="flex ">
-              <span className="text-sm font-medium text-gray-700 pr-1 pt-[2px]"><TbBriefcase2 /></span>
-              <span className="text-sm text-gray-600">{job.experience}</span>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-2 ">
-            {job.skills.map((skill, index) => (
-              <span
-                key={index}
-                className="text-xs bg-blue-100 text-[#4969E1] px-3 py-1 rounded-lg font-medium"
+          <h2 className="text-3xl font-bold text-[#121224] mb-8 text-center">
+            Featured Jobs
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {jobCards.map((job) => (
+              <div
+                key={job.id}
+                className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                {skill}
-              </span>
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <img
+                      src={job.logo}
+                      alt={job.company}
+                      className="w-20 h-20 rounded-lg mr-4 object-cover"
+                    />
+                    <div>
+                      <h3 className="text-lg font-bold text-[#121224]">
+                        {job.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">{job.company}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-4 mb-4">
+                    <div className="flex">
+                      <span className="text-sm text-gray-600 pr-1">
+                        <FaLocationDot />{" "}
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        {job.location}
+                      </span>
+                    </div>
+                    <div className="flex">
+                      <span className="text-sm font-medium text-gray-700 pt-[1px]">
+                        <FaRupeeSign />
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        {job.salary}
+                      </span>
+                    </div>
+                    <div className="flex ">
+                      <span className="text-sm font-medium text-gray-700 pr-1 pt-[2px]">
+                        <TbBriefcase2 />
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        {job.experience}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 ">
+                    {job.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="text-xs bg-blue-100 text-[#4969E1] px-3 py-1 rounded-lg font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 text-center border-t border-gray-200">
+                  <a
+                    href={job.applyUrl}
+                    target="_blank"
+                    className="inline-block px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition"
+                  >
+                    Apply Now
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-        <div className="bg-gray-50 p-4 text-center border-t border-gray-200">
-          <a
-            href={job.applyUrl}
-            target="_blank"
-            className="inline-block px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition"
-          >
-            Apply Now
-          </a>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
 
         <Cardscroller />
 
@@ -237,9 +244,8 @@ export default function Home() {
         </div>
       </main>
       <div className="sticky bottom-0 w-full bg-white p-4 z-10 border-t md:px-10 lg:px-20">
-  <SearchBar />
-</div>
-
+        <SearchBar />
+      </div>
     </div>
   );
 }
