@@ -36,7 +36,21 @@ function Setting() {
 
       <div className="border-b border-gray-200 pb-4 mb-6">
         <ul className="flex space-x-4">
-          
+          {["general", "appearance", "notifications"].map((tab) => (
+            <li key={tab}>
+              <button
+                onClick={() => handleTabClick(tab)}
+                className={`text-gray-600 hover:text-gray-800 relative pb-2 ${
+                  activeTab === tab ? "text-indigo-600 font-medium" : ""
+                }`}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                {activeTab === tab && (
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-indigo-600 rounded-full"></div>
+                )}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
 
